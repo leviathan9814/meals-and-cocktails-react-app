@@ -1,0 +1,149 @@
+.cocktails {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        gap: 1.5rem;
+
+        .box {
+            background: #fff;
+            border: .1rem solid rgba(0, 0, 0, .2);
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            
+
+            .image {
+                height: 25rem;
+                width: 100%;
+                padding: 1.5rem;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: .5rem;
+                    object-fit: cover;
+
+                    @media (max-width: 451px) {
+                        height: 30rem;
+                        width: auto;
+                    }
+                }
+
+                .fa-heart,
+                .fa-eye {
+                    position: absolute;
+                    top: 2rem;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    font-size: 2rem;
+                    color: var(--black);
+        
+                    &:hover,
+                    &:hover{
+                        background: var(--green);
+                        color:#fff;
+                    }
+                }
+        
+                .fa-heart{
+                    right: -15rem;
+                }
+        
+                .fa-eye{
+                    left: -15rem;
+                }
+        
+                &:hover .fa-heart{
+                    right: 2rem;
+                }
+        
+                &:hover .fa-eye{
+                    left: 2rem;
+                }
+            }
+
+            .content {
+                padding: 2rem;
+                padding-top: 0;
+
+                .stars {
+                    padding-bottom: 1rem;
+
+                    i {
+                        font-size: 1.7rem;
+                        color: var(--green);
+                    }
+                }
+
+                h3 {
+                    color: var(--black);
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    color: var(--light-color);
+                    font-size: 1.6rem;
+                    padding: .5rem 0;
+                    line-height: 1.5rem;
+                }
+
+                .price {
+                    color: var(--green);
+                    margin-left: 1rem;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (max-width: 451px) {
+        padding: 10rem 2rem;
+    }
+}
+
+.dark-mode {
+    .cocktails {
+        background: rgb(88, 88, 88);
+        .box-container {
+            .box {
+                background: rgba(46, 45, 45, 1);
+                border: .1rem solid rgba(146, 146, 146, 0.8);
+    
+                .content {
+    
+                    .stars {
+    
+                        i {
+                            color: darkorange;
+                        }
+                    }
+    
+                    h3 {
+                        color: #fff;
+                    }
+    
+                    p {
+                        color: var(--green);
+                    }
+    
+                    .price {
+                        color: #fff;
+                        margin-left: 1rem;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

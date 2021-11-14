@@ -1,0 +1,56 @@
+.light-mode {
+  background-color: #fff;
+  transition: background-color 0.25s ease-out;
+}
+
+.dark-mode {
+  background-color: #262626;
+  transition: background-color 0.25s ease-out;
+
+  .heading {
+    color: #fff;
+  }
+  
+}
+
+.sub-heading {
+  text-align: center;
+  color: var(--green);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  margin: 1rem 1rem 0 0;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--black);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+}
+
+.btn:hover {
+  background: var(--green);
+  letter-spacing: .1rem;
+}
+
+section{
+
+  padding: 2rem;
+
+  &:nth-child(even){
+    background:#eee;
+  }
+  
+}
+
